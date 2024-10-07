@@ -65,8 +65,59 @@ The **Human-Following Robot** is an Arduino-based project designed to autonomous
 
 ---
 
+
 ## Installation
 
-1. **Clone the Repository**
+### 1. Open the Project
+- **Launch the Arduino IDE**.
+- **Open the `.ino` file** from the cloned repository by navigating to **File** > **Open** and selecting the appropriate `.ino` file.
+
+### 2. Install Required Libraries
+Ensure the following libraries are installed:
+
+- **NewPing**
+- **Servo**
+- **Adafruit Motor Shield V2**
+
+To install these libraries:
+
+- Go to **Sketch** > **Include Library** > **Manage Libraries**.
+- In the Library Manager, search for each library by name and click **Install**.
+
+### 3. Connect Hardware
+- **Assemble the robot chassis**.
+- Connect the **ultrasonic sensor**, **servo motor**, and **DC motors** to the Arduino and Motor Shield according to the wiring diagram provided in this repository.
+
+### 4. Upload the Code
+- In the Arduino IDE, select the correct **Board** and **Port** from the **Tools** menu.
+  - For example, if you're using an Arduino Uno, go to **Tools** > **Board** > **Arduino Uno**.
+  - Then select the correct **Port** (e.g., **COM3** or similar, depending on your system).
+- Once everything is connected, click the **Upload** button (right arrow icon) in the Arduino IDE to upload the code to the board.
+
+---
+
+## Usage
+
+### 1. Power On
+- Ensure the robot is connected to a stable power source.
+- You can power it using batteries or a USB connection to the Arduino, depending on your setup.
+
+### 2. Initialization
+- Upon powering the robot, the **servo motor** will perform a sweep to calibrate the ultrasonic sensor.
+- This helps the robot "scan" the surroundings and detect the initial position of the human target.
+
+### 3. Operation
+- The robot will autonomously start following the human target after calibration.
+- It maintains an optimal distance using the **ultrasonic sensor** to avoid obstacles.
+
+### 4. Monitoring
+- Open the **Serial Monitor** in the Arduino IDE (press **Ctrl + Shift + M** or navigate to **Tools** > **Serial Monitor**).
+- Set the baud rate to **9600** to view real-time data, including:
+  - **Distance** measured by the ultrasonic sensor.
+  - Status of the **RIGHT** and **LEFT** sensors.
+  
+You can use this information to debug and ensure the robot is following the target correctly.
+
+**Clone the Repository**
    ```bash
    git clone https://github.com/NandishKoppad09/human-following-robot.git
