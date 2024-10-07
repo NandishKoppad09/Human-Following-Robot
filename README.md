@@ -58,8 +58,8 @@ The **Human-Following Robot** is an Arduino-based project designed to autonomous
 ## Wiring Diagram
 
 (![robo-wiring](https://github.com/user-attachments/assets/17daeea6-137d-4927-a328-b1e7fe1b75c7)
-"Wiring Diagram for Human-Following Robot")
-)
+
+
 
 *Ensure all connections are secure and double-check pin assignments before powering the robot.*
 
